@@ -10,6 +10,40 @@ The final project include a web app where an emergency worker can input a new me
 
 The code was adapted from Udacity Nanodegree Project. The code is welcomed to be shared/reused etc. under MIT license. 
 
+### Project Component:
+
+There are three main components in the folder:
+
+1. ETL Pipeline
+In a Python script, process_data.py, write a data cleaning pipeline that:
+
+Loads the messages and categories datasets
+Merges the two datasets
+Cleans the data
+Stores it in a SQLite database
+
+-- A database was already added into the folder. It's directly usable in the employed pipeline. 
+
+2. ML Pipeline
+In a Python script, train_classifier.py, write a machine learning pipeline that:
+
+Loads data from the SQLite database
+Splits the dataset into training and test sets
+Builds a text processing and machine learning pipeline
+Trains and tunes a model using GridSearchCV
+Outputs results on the test set
+Exports the final model as a pickle file
+
+-- The trained ML model is available under ./models folder, with the name classifier.pkl. The current model is trained and grid searched by the randomForest model. You can also train your own model by adapting the train_classifier.py, e.g. you can try LinearSVC as estimator inside MultiOutputClassifier (thanks to you the reviewer for the suggestion). 
+
+3. Flask Web App
+We are providing much of the flask web app for you, but feel free to add extra features depending on your knowledge of flask, html, css and javascript. For this part, you'll need to:
+
+Modify file paths for database and model as needed
+Add data visualizations using Plotly in the web app. 
+
+-- Data visualizations are important components in the Flask Web App. We currently have the 5 top frequently encounted categories available in the webApp. All visualizations are performed by plotly.
+
 
 ### Instructions to deployment:
 1. Run the following commands in the project's root directory to set up your database and model.
